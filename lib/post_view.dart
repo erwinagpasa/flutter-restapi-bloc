@@ -19,13 +19,15 @@ class PostsView extends StatelessWidget {
               child: CircularProgressIndicator(),
             );
           }
-          return ListView.builder(itemBuilder: (context, index) {
-            return Card(
-              child: ListTile(
-                title: Text(posts[index].title),
-              ),
-            );
-          });
+          return ListView.builder(
+              itemCount: posts.length,
+              itemBuilder: (context, index) {
+                return Card(
+                  child: ListTile(
+                    title: Text(posts[index].title),
+                  ),
+                );
+              });
         },
       ),
     );

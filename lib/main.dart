@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: BlocProvider<PostsCubit>(
-            create: (context) => PostsCubit(), child: const PostsView()));
+            create: (context) => PostsCubit()..getPosts(),
+            child: const PostsView()));
   }
 }
